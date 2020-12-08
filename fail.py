@@ -1,5 +1,6 @@
 import gerador_fail, consulta_fail, ler_json_fail
-import datetime
+import datetime, os
+os.system("clear")
 print("""
 _/﹋\_
 (҂`_´)
@@ -32,12 +33,15 @@ def consultas():
     print('1 = Consulta CEP \n2 = Consulta Ip\n3 = Consulta cnpj ')
     opcao = input('Escolha uma opção: ')
     if opcao == '1' or opcao == '01':
+        os.system("clear")
         banner_2()
         consulta_fail.Consulta_Cep()
     elif opcao == '2' or opcao == '02':
+        os.system("clear")
         banner_2()
         consulta_fail.Consulta_IP()
     elif opcao == '3' or opcao == '03':
+        os.system("clear")
         banner_2()
         consulta_fail.Consulta_CNPJ()
     else:
@@ -47,15 +51,19 @@ def geradores():
     print('1 = Gerador de cpf\n2 = Gerador de cnpj\n3 = Gerador de conta bancaria\n4 = Gerador de números do cartão')
     opc = input('Escolha uma dessas opções: ')
     if opc == '1' or opc == '01':
+        os.system("clear")
         banner_2()
         gerador_fail.gerador_de_cpf()
     elif opc == '2' or opc == '02':
+        os.system("clear")
         banner_2()
         gerador_fail.gerador_de_cnpj()
     elif opc == '3' or opc == '03':
-        ler_json_fail.ler_conta_bancaria()
+        os.system("clear")
         banner_2()
+        ler_json_fail.ler_conta_bancaria()
     elif opc == '4' or opc == '04':
+        os.system("clear")
         banner_2()
         ler_json_fail.ler_numero_cartao()
     else:
