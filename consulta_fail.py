@@ -31,7 +31,7 @@ def Consulta_IP():
     api = url.json()
     if 'message' not in api:
         print(f'\nStatus: {api["status"]}\nIP: {api["query"]}')
-        print(f'País: {api["country"]}\nUf País: {api["countryCode"]}\Estado: {api["regionName"]}\nEStado uf: {api["region"]}\nCidade: {api["city"]}\nCódico Postal: {api["zip"]}')
+        print(f'País: {api["country"]}\nUf País: {api["countryCode"]}\nEstado: {api["regionName"]}\nEStado uf: {api["region"]}\nCidade: {api["city"]}\nCódico Postal: {api["zip"]}')
         print(f'Lat: {api["lat"]}\nLon: {api["lon"]}\nFuso horário: {api["timezone"]}\nProvedor: {api["org"]}\n ')
     else:
         print(f'{ip} IP invalído')
@@ -40,7 +40,7 @@ def Consulta_CNPJ():
     cnpj = input('CNPJ a consultar: ')
     if len(cnpj) != 14:
         print("Quantidade de digitos errada")
-    url = requests.get('https://www.receitaws.com.br/v1/cnpj/02558157000162')
+    url = requests.get(f'https://www.receitaws.com.br/v1/cnpj/{cnpj}')
     api = url.json()
     if 'message' not in api:
         print(f'CNPJ: {api["cnpj"]}\nSituação: {api["situacao"]}\nData da situação: {api["data_situacao"]}\nAbertura: {api["abertura"]}')
